@@ -15,11 +15,43 @@
 
 # 2. Initial Solution
 
-
+def get_grade(test_scores)
+    sum = 0.00
+    test_scores.each {|score| sum += score}
+    avg = sum / test_scores.length
+    case avg
+    when 90..100
+        return "A"
+    when 80...90
+        return "B" 
+    when 70...80
+        return "C"
+    when 60...70
+        return "D"
+    else
+        return "F"
+    end
+end
 
 
 # 3. Refactored Solution
 
+def get_grade(test_scores)
+    sum = 0.00
+    test_scores.each {|score| sum += score}
+    case sum / test_scores.length
+    when 90..100
+        return "A"
+    when 80...90
+        return "B" 
+    when 70...80
+        return "C"
+    when 60...70
+        return "D"
+    else
+        return "F"
+    end
+end
 
 
 # 4. Reflection 
