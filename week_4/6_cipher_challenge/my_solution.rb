@@ -1,7 +1,7 @@
 # U2.W4: Cipher Challenge
 
 
-# I worked on this challenge with: .
+# I worked on this challenge with:  Tim Howard.
 
 
 
@@ -12,16 +12,19 @@
 
 
 def north_korean_cipher(coded_message)
-  input = coded_message.downcase.split("") # Check out this method in IRB to see how it works! Also refer to the ruby docs.
+  input = coded_message.downcase.split("") # Check out this method in IRB to see how it works! Also refer to the ruby 
+                                           # docs. When the split method is called with a delimeter of "", it returns an 
+                                           # array with each element containing a single character from the string.
+                                           # 
   decoded_sentence = []
   cipher = {"e" => "a",   # This is technically a shift of four letters...Can you think of a way to automate this? Is a hash
             "f" => "b",   # the best data structure for this problem? What are the pros and cons of hashes?
-            "g" => "c", 
-            "h" => "d", 
-            "i" => "e", 
-            "j" => "f",
-            "k" => "g",
-            "l" => "h",
+            "g" => "c",   #
+            "h" => "d",   # A way we can automate this process is to use an array. We can use the .index function to
+            "i" => "e",   # locate where the letter falls in the standard alphabet order, and then shift that index
+            "j" => "f",   # to the 'left' by 4 indices (using -4). In addition, a benefit to using an array to accomplish
+            "k" => "g",   # this task is that calling array[num] with a negative number will return the element counting from 
+            "l" => "h",   # the end of the array, i.e. array[-4] will return the element 4 positions behind the last element.
             "m" => "i",
             "n" => "j",
             "o" => "k",
@@ -41,8 +44,12 @@ def north_korean_cipher(coded_message)
             "c" => "y",
             "d" => "z"}
             
-  input.each do |x| # What is #each doing here?
-    found_match = false  # Why would this be assigned to false from the outset? What happens when it's true?
+  input.each do |x| # What is #each doing here? .each is going through every character of the original coded_message
+    found_match = false  # Why would this be assigned to false from the outset? What happens when it's true? This is set
+                         # to false from the offset because we have not yet found a match between the current character
+                         # and the set of keys in the cipher hash. When this value is true, then the 'if not found_match' 
+                         # statement will NOT run. This means that when the found_match value is true, the value will be converted 
+                         # to some new value; when the found_match value is false, the character will not be converted to a new value.
     cipher.each_key do |y| # What is #each_key doing here?
       if x == y  # What is this comparing? Where is it getting x? Where is it getting y? What are those variables really?
         puts "I am comparing x and y. X is #{x} and Y is #{y}."
