@@ -4,7 +4,7 @@
 # include it in this file. Also make sure everything that isn't code
 # is commented in the file.  
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself, with: Andy Principe].
 
 # 1. Pseudocode
 
@@ -16,9 +16,10 @@
 # 2. Initial Solution
 
 def get_grade(test_scores)
-    sum = 0.00
+    sum = 0.0
     test_scores.each {|score| sum += score}
     avg = sum / test_scores.length
+
     case avg
     when 90..100
         return "A"
@@ -37,8 +38,9 @@ end
 # 3. Refactored Solution
 
 def get_grade(test_scores)
-    sum = 0.00
+    sum = 0.0
     test_scores.each {|score| sum += score}
+    
     case sum / test_scores.length
     when 90..100
         return "A"
