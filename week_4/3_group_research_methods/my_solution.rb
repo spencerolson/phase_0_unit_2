@@ -19,19 +19,23 @@ end
 #
 
 # Person 2
-def my_array_modification_method(source, thing_to_modify)
-  # Your code here!
+def my_array_modification_method(array, num_to_add)
+  array.map!{|x| if x.is_a? Integer then x+= num_to_add else x end}
+  array
 end
 
-def my_hash_modification_method(source, thing_to_modify)
-  # Your code here!
+def my_hash_modification_method(hash, num_to_add)
+  hash.each{|key,value| hash[key] = value + num_to_add}
+  hash
 end
 
 # Identify and describe the ruby method you implemented. 
-# 
-#
-#
-
+# I implemented the map! and each methods. The map! method
+# evaluates the code between the curly brackets and replaces
+# the element with the value that is evaluated. By using the bang(!)
+# we're sure that we're modifying the actual array. With the hash method
+# I used .each and then used hash[key] = value to alter the actual value of
+# the hash.
 
 # Person 3
 def my_array_sorting_method(source)

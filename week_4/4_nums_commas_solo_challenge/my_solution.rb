@@ -14,7 +14,24 @@
 
 # 2. Initial Solution
 
-
+def separate_comma (int_num)
+    if int_num.to_s.length <=3 then
+        return int_num.to_s 
+    else
+        
+        num_with_commas = ""
+        current_digit_index = 0
+        int_num.to_s.reverse.split("").each do |digit|
+            if  current_digit_index != 0 && current_digit_index % 3 == 0
+                num_with_commas << ","
+            end
+            num_with_commas << digit
+            current_digit_index += 1
+        end
+        
+        return num_with_commas.reverse
+    end    
+end
 
 
 # 3. Refactored Solution
