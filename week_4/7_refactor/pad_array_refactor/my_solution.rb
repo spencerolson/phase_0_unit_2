@@ -82,3 +82,5 @@ end
 
 
 # 5. Reflection
+
+# This exercise was great because it opened my eyes to the many ways people can going about solving a problem to arrive at the same solution. My final, refactored solution took a LOT of materail from Colin Trent's solution. I really liked his code because it was very D.R.Y., yet also very easy to read and understand. The main changes I made to my code included added a while loop instead of adding multiple arrays onto the existing array (this method just reads cleaner and makes more conceptual sense to me, and better reflects what I was really trying to do), using the keyword length instead of self.count (to make the code cleaner), and calling the pad! method from inside the pad method (to avoid duplicating a bunch of code).
