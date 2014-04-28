@@ -99,7 +99,6 @@ def north_korean_cipher(coded_message)
                          
     alphabet.each do |y| 
       if x == y  
-        puts "I am comparing x and y. X is #{x} and Y is #{y}."
         decoded_sentence << alphabet[alphabet.index(y)-4]
         found_match = true
         break  
@@ -107,6 +106,7 @@ def north_korean_cipher(coded_message)
         decoded_sentence << " "
         found_match = true
         break
+      end
     end
     if not found_match 
       decoded_sentence << x
@@ -126,11 +126,12 @@ end
 # Driver Code:
 p north_korean_cipher("m^aerx%e&gsoi!") == "i want a coke!" #This is driver code and should print true
 # Find out what Kim Jong Un is saying below and turn it into driver code as well. Driver Code statements should always return "true"
-p north_korean_cipher("syv@tistpi$iex#xli*qswx*hipmgmsyw*erh*ryxvmxmsyw%jsshw^jvsq^syv#1000000#tvsjmxefpi$jevqw.")
-p north_korean_cipher("syv%ryoiw#evi#liph^xskixliv@fc^kveti-jpezsvih@xsjjii.*hsr'x%xipp&xli#yw!")
-p north_korean_cipher("mj^csy&qeoi^sri*qmwxeoi,%kir.*vm@csrk-kmp,&csy^ampp*fi&vitpegih*fc@hirrmw&vshqer.")
-p north_korean_cipher("ribx^wxst:$wsyxl%osvie,$xlir$neter,#xlir%xli%asvph!")
-p north_korean_cipher("ger^wsqifshc*nywx^kix^qi&10000*fekw@sj$gssp%vergl@hsvmxsw?")
+p north_korean_cipher("syv@tistpi$iex#xli*qswx*hipmgmsyw*erh*ryxvmxmsyw%jsshw^jvsq^syv#1000000#tvsjmxefpi$jevqw.") == "our people eat the most delicious and nutritious foods from our 10000 profitable farms."
+p north_korean_cipher("syv%ryoiw#evi#liph^xskixliv@fc^kveti-jpezsvih@xsjjii.*hsr'x%xipp&xli#yw!") == "our nukes are held together by grape-flavored toffee. don't tell the us!"
+p north_korean_cipher("mj^csy&qeoi^sri*qmwxeoi,%kir.*vm@csrk-kmp,&csy^ampp*fi&vitpegih*fc@hirrmw&vshqer.") == "if you make one mistake, gen. ri yong-gil, you will be replaced by dennis rodman."
+p north_korean_cipher("ribx^wxst:$wsyxl%osvie,$xlir$neter,#xlir%xli%asvph!") == "next stop: south korea, then japan, then the world!"
+p north_korean_cipher("ger^wsqifshc*nywx^kix^qi&10000*fekw@sj$gssp%vergl@hsvmxsw?") == "can somebody just get me 100 bags of cool ranch doritos?"
 
 # Reflection
  
+# This challenge was pretty overwhelming at first, but when we broke it down into small pieces, and tackled chunks of code at a time for refactoring, it was much more manageable. We decided to use an array that contained the alphabet, instead of a hash, for our solution. This worked out nicely because you can call an array indice using a negative number (which we had to do in our code), and it will give you that indice, starting from the end of the array and moving left. It was also a good exercise to help me solidify my knowledge on creating tests, and making sure they always evaluate to true or false.
