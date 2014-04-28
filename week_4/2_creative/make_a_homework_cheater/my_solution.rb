@@ -1,7 +1,7 @@
 # U2.W4: Homework Cheater!
 
 
-# I worked on this challenge [by myself, with: Andy Principe].
+# I worked on this challenge with: Andy Principe.
 
 # 2. Pseudocode
 
@@ -17,6 +17,42 @@
 
 
 # 3. Initial Solution
+# def essay_writer (famous_person_hash)
+
+#   title = capitalize_every_word(famous_person_hash[:title])
+#   name = capitalize_every_word(famous_person_hash[:name])
+#   pronoun = famous_person_hash[:pronoun]
+#   famous_attribute = famous_person_hash[:famous_attribute]
+#   famous_date = famous_person_hash[:famous_date]
+#   favorite_color = famous_person_hash[:favorite_color]
+#   animal = famous_person_hash[:animal]
+#   pet_name = capitalize_every_word(famous_person_hash[:pet_name])
+#   death_date = famous_person_hash[:death_date]
+
+
+#   return capitalize_every_sentence("#{title}\n#{name} was a very important person in history. #{pronoun} is best known for #{famous_attribute} in #{famous_date}. it is a little known fact that #{pronoun} loved the color #{favorite_color}. as a small child, #{name} had a gigantic #{animal} as a pet named #{pet_name}. sadly, #{name} was mauled by #{pet_name} shortly after being recognized for #{famous_attribute}. #{name} died in #{death_date}")
+
+    
+# end
+
+# def capitalize_every_word(sentence)
+#   sentence.split.map(&:capitalize).join(' ')
+# end
+
+# def capitalize_every_sentence(paragraph_string)
+#   final_sentence = ""
+
+#   paragraph_array = paragraph_string.split(". ")
+#   paragraph_array.each{|sentence| final_sentence += sentence.slice(0,1).capitalize + sentence.slice(1..-1) + ". "}
+
+#   return final_sentence[0..-2]
+# end
+
+
+
+
+# 4. Refactored Solution
+
 def essay_writer (famous_person_hash)
 
   title = capitalize_every_word(famous_person_hash[:title])
@@ -48,14 +84,7 @@ def capitalize_every_sentence(paragraph_string)
   return final_sentence[0..-2]
 end
 
-
-
-
-# 4. Refactored Solution
-
-
-
-
+ # My refactored solution is the same as my inital solution because Andy and I were refacatoring on-the-fly. Some on-the-fly refactoring changes we made included: making the capitalize_every_word and capitalize_every_sentence helper methods to make our code more D.R.Y., creating variable names for each attribute at the top of the method to make our code more D.R.Y., and using #{} to refer to our variables within a string, as opposed to closing the string and using '+' signs.
 
 
 
@@ -117,4 +146,4 @@ puts essay_writer(thomas_edison)
 
 # 5. Reflection 
 
-
+# This was a really fun exercise to pair on. Suprisingly, though, it was quite difficult for us. On its face, this challenge didn't seem like it would be too difficult, but we hit a fair amount of roadblocks along the way. We had a hard time figuring out how to capitalize multiple words in the same string, e.g. for the title capitalizing each word. We ended up using .split, .map, and .join to help us solve that problem, and basically split the desired string into sub-strings, and then used .capitalize on each sub-string, and then re-combined the sub-strings back into one string. Maybe not the most efficient method possible, but it worked for us! I think the both of us learned a lot about writing non-Rspec test code. I think our tests are pretty nice and useful for this challenge; they output a very clear message about each test.
