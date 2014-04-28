@@ -82,8 +82,9 @@ p my_array_deletion_method(i_want_pets, "a") == ["I", 4, "pets", "but", "I", "on
 p my_hash_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie" => 5, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 
 # Reflect!
-# 
-# 
-# 
-# 
-# 
+# This exercise gave me a good understanding of destructive vs. non-desctructive methods
+# in Ruby. I was able to use the map! and each methods to modify the actual variable
+# inputs, instead of making modifications to copies of those variables. I think the
+# 2 biggest things I took away from this challenge were 1) how to use the map! method
+# on an array, and 2) how to use the each method on a hash (specifically learning how to 
+# access the key and value from within the curly brackets of the each method.
