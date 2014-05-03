@@ -1,7 +1,7 @@
 # U2.W5: Die Class 1: Numeric
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself, with: Tim Howard].
 
 # 2. Pseudocode
 
@@ -14,15 +14,17 @@
 
 class Die
   def initialize(sides)
+  	raise ArgumentError, 'Your die must have at least one side.' if sides < 1
+  	@sides = sides
     # code goes here
   end
   
   def sides
-    # code goes here
+    @sides
   end
   
   def roll
-    # code goes here
+     rand(1..@sides)
   end
 end
 
@@ -38,8 +40,7 @@ end
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
 
+test_die = Die.new(12)
+puts "Test 1: Returns 12 for number of sides: #{test_die.sides == 12}"
 
-
-
-
-# 5. Reflection 
+# 5. Reflection
