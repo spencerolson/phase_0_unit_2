@@ -1,7 +1,7 @@
 # U2.W5: Class Warfare, Validate a Credit Card Number
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge with Andy Principe.
 
 # 2. Pseudocode
 
