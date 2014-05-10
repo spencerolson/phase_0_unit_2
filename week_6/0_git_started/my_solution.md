@@ -44,7 +44,14 @@ Shows you which files are in your current repository, which changes need to be c
 ## Release 4: Git Workflow
 
 - Push files to a remote repository
+1. Ensure you've committed locally (see steps below)
+2. git push origin master
+
 - Fetch changes
+
 - Commit locally
+1. git add 'file_name'
+2. git status (to check which changes are going to be committed)
+3.git commit -m "Commit message"
 
 ## Release 5: Reflection
