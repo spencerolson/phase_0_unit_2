@@ -48,6 +48,14 @@ Shows you which files are in your current repository, which changes need to be c
 2. git push origin master
 
 - Fetch changes
+1. Check to see if you've already linked a remote repo to this local repo by typing git remote -v
+2. If there's already a linked remote repo, move on to step 3. Otherwise, type git remote add upstream https://github.com/spencerolson/repo_name.git
+3. To fetch changes, type git fetch (note: this will NOT merge changes. Rather, it will store the upstream's 'master' branch in your local 'upstream/master' branch)
+4. To make sure we're on our local master branch, type git checkout master
+5. git merge upstream/master. This merges the upstream/master branch with the newly 'downloaded' info into your 'master' branch.
+6.Commit your local repo with your remote fork. Type git commit -m "Add Devbootamp changes"
+7. Push changes to the remote fork. Type git push origin master
+
 
 - Commit locally
 1. git add 'file_name'
