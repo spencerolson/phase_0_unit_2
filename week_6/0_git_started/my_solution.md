@@ -43,11 +43,11 @@ Shows you which files are in your current repository, which changes need to be c
 
 ## Release 4: Git Workflow
 
-- Push files to a remote repository
+#### Push files to a remote repository
 1. Ensure you've committed locally (see steps below)
 2. git push origin master
 
-- Fetch changes
+#### Fetch changes
 1. Check to see if you've already linked a remote repo to this local repo by typing git remote -v
 2. If there's already a linked remote repo, move on to step 3. Otherwise, type git remote add upstream https://github.com/spencerolson/repo_name.git
 3. To fetch changes, type git fetch (note: this will NOT merge changes. Rather, it will store the upstream's 'master' branch in your local 'upstream/master' branch)
@@ -57,9 +57,11 @@ Shows you which files are in your current repository, which changes need to be c
 7. Push changes to the remote fork. Type git push origin master
 
 
-- Commit locally
+#### Commit locally
 1. git add 'file_name'
 2. git status (to check which changes are going to be committed)
-3.git commit -m "Commit message"
+3. git commit -m "Commit message" 
 
 ## Release 5: Reflection
+
+I had a very basic understanding of git before doing this exercise, and I was previously trying to force myself to use the terminal wherenever possible, as opposed to using the GitHub app. However, doing this exercise definitely helped solidify some of the knowledge I had before, and I also learned some new key commands. I think the biggest takeaway from this exercise for me was learning the difference between 'pull' and 'fetch' -- this had really confused me before. I learned that, essentially, a 'pull' command is basically a 'fetch' followed by a 'merge'. I read a few articles stating that it is better convention to manually do a 'fetch' followed by a 'merge', rather than using 'pull', because you should be able to truly understand and differentiate between a 'fetch' and 'merge', and if you run into issues it's much easier to 'debug' when using 'fetch' + 'merge' as opposed to 'pull'. For now, I'll try to use the 'fetch' + 'merge' technique, but when I feel I truly understand them, I may switch to the more convenient 'pull'.
