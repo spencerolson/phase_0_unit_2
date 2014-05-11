@@ -133,4 +133,4 @@ assert {silverware_drawer.remove_item == nil}
 
 
 # 5. Reflection 
-#In this challenge, I got some experience with debugging and interpreting error messages. Sometimes the error messages can be misleading, but
+#In this challenge, I got some experience with debugging and interpreting error messages. Sometimes the error messages can be misleading and it's difficult to determine what is really going on. I found that adding puts statements in the code helps immensely to track how variables and methods are acting as the code runs. I also learned some new methods, such as .clear and .delete.
