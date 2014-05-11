@@ -5,9 +5,12 @@
 
 
 # 2. Pseudocode
+
 # 1. Paste in code from last week into BoggleBoard class
-# 2. Create initialize method
-# 3. Write assert statments for driver/test code
+# 2. Take code from last week and incorporate it into a class
+# 3. Create initialize method
+# 4. Create create_word method
+# 5. Write assert statments for driver/test code
 
 
 # 3. Initial Solution
