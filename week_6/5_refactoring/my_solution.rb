@@ -59,7 +59,7 @@ class CreditCard
 
   def check_card
     @card_num.each_index{|digit_index| @card_num[digit_index] *=2 if digit_index % 2 == 0}#double the value of each digit that is in an even indice.
-    @card_num = @card_num.join('').chars.map(&:to_i) #puts each individual digit in its own indice, e.g. if the array was [4,12,3] after doubling each even indice, it is now [4,1,2,3]. We need to do this so we can add each digit up in the next step.
+    @card_num = @card_num.join.chars.map(&:to_i) #puts each individual digit in its own indice, e.g. if the array was [4,12,3] after doubling each even indice, it is now [4,1,2,3]. We need to do this so we can add each digit up in the next step.
     @card_num.inject(:+) % 10 == 0 #adds up each digit and checks to see if the sum is evenly divisible by 10.
   end
 end
